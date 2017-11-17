@@ -1,0 +1,45 @@
+header.header#header
+    .header-fixed
+        .logo
+            a(href="/")
+                img(src="assets/img/YourCoise.png" alt="YourChoise")
+        a.c-hamburger.c-hamburger-sm.c-hamburger--htx.hidden-lg.hidden-md(href="#sidebar-left")
+            span toggle menu
+        .container-fluid.container-md-30.hidden-xs.hidden-sm
+            .row
+                .col-lg-4.col-md-6
+                    .header-list
+                        .header-search
+                            form(action="#" method="post")
+                                input.form-control(type="text" value="" name="field-search" placeholder="Search on product by ID or title ..")
+                                button.btn(type="submit")
+                                    span.glyphicon.glyphicon-search
+                .col-lg-6.col-lg-offset-2.col-md-6
+                    .header-list.text-right
+                        .header-item.dropdown.user
+                            a.dropdown-toggle(type="button" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+                                span.name Eric Slachmuylders
+                                span.position Administrator
+                                span.circle
+                                    img(src="assets/img/avatar.png" alt="User Avatar")
+                            ul.dropdown-menu(ria-labelledby="dropdownUser")
+                                li
+                                    a(href="#") Setting1
+                                li
+                                    a(href="#") Setting2
+                                li
+                                    a(href="#") Logout
+                        .header-item.dropdown.add
+                            a.btn.btn-circle(type="button" id="dropdownAdd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true")
+                                span.glyphicon.glyphicon-plus
+                            ul.dropdown-menu(ria-labelledby="dropdownAdd")
+                                li
+                                    a(href="#") Make order.
+                                li
+                                    a(href="#") Stock check-in.
+                                li
+                                    a(href="#") Stock check-out.
+                                li
+                                    a(href="#") Stock set-manual.
+                                li
+                                    a(href="#") Add barcode.

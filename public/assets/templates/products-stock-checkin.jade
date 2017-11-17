@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        title Page Products stock checkin
+        include elements/head
+    body
+        .site-wrapper
+            include elements/header
+            include elements/sidebar
+            .content-container
+                .container-fluid.container-md-30
+                    .form-group.fg-lg
+                        .panel.panel-default
+                            .panel-heading
+                                .heading-title Stock Check-in
+                            .panel-body
+                                .special-wrapper
+                                    .special-sidebar
+                                        include elements/filter-simple
+                                    .special-content
+                                        .form-group.fg-lg
+                                            include elements/table-radio
+                                        .row
+                                            .col-lg-8.col-md-10
+                                                .form-group
+                                                    label.control-label(for="field-text-4") Additional stock amount:
+                                                    .row.row-xxs
+                                                        .col-md-8
+                                                            .form-group
+                                                                input.form-control(type="text" name="field-text-4" id="field-text-4" value="" placeholder="Add the new stock amount ..")
+                                                        .col-md-4
+                                                            .form-group
+                                                                a.btn.btn-primary.btn-block Add new stock
+                                        .row
+                                            .col-lg-8.col-md-10
+                                                .form-group
+                                                    label.control-label(for="field-text-5") Add barcode to product:
+                                                    .row.row-xxs
+                                                        .col-md-8
+                                                            .form-group
+                                                                input.form-control(type="text" name="field-text-5" id="field-text-5" value="230981329108" placeholder="Add new barcode of this product ..")
+                                                        .col-md-4
+                                                            .form-group
+                                                                a.btn.btn-primary.btn-block Add barcode to product
+            include elements/footer
+            include elements/scripts

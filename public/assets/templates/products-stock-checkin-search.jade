@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+    head
+        title Page Products stock checkin
+        include elements/head
+    body
+        .site-wrapper
+            include elements/header
+            include elements/sidebar
+            .content-container
+                .container-fluid.container-md-30
+                    .form-group.fg-lg
+                        .panel.panel-default
+                            .panel-heading
+                                .heading-title Stock Check-in
+                            .panel-body
+                                .special-wrapper
+                                    .special-sidebar
+                                        - var $reset = true
+                                        include elements/filter-simple
+            include elements/footer
+            include elements/scripts

@@ -1,0 +1,33 @@
+.navigation-pagination {
+    &.right {
+        text-align: right;
+    }
+    .glyphicon {
+        position: relative;
+        top: 2px;
+    }
+    ul {
+        > li {
+            &.active {
+                > span,
+                > a {
+                    @include gradient-brand-orange;
+                    border-color: transparent;
+                    &:hover,
+                    &:focus {
+                        border-color: transparent;
+                    }
+                }
+            }
+            > span,
+            > a {
+                color: #16191b;
+                border-color: #ced4da;
+                &:hover,
+                &:focus {
+                    color: #f4282d;
+                }
+            }
+        }
+    }
+}

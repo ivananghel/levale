@@ -1,0 +1,26 @@
+.status {
+    background: #c2cad4;
+    border-radius: 3px;
+    padding: 2px 8px;
+    line-height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 12.6px;
+    text-transform: lowercase;
+    &.btn-block {
+        text-align: center;
+    }
+    &-success {
+        background: #36af47;
+    }
+    &-danger {
+        background: #f03e3e;
+    }
+    &-primary {
+        background: $brand-color;
+    }
+    &-info {
+        background: #6b9cb5;
+    }
+}

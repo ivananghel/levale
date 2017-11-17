@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+    head
+        title Page User settings
+        include elements/head
+    body
+        .site-wrapper
+            include elements/header
+            include elements/sidebar
+            .content-container
+                .container-fluid.container-md-30
+                    .form-group.fg-lg
+                        .panel.panel-default
+                            .panel-heading
+                                .heading-title Gebruiker instellingen
+                            .panel-body
+                                form(action="#" method="post")
+                                    .table-filter
+                                        .form-horizontal
+                                            .row.row-xs.form-group
+                                                label.control-label.col-sm-4
+                                                    | Email:
+                                                    span.require *
+                                                .col-sm-6
+                                                    input.form-control(type="email" name="field-text-1" id="field-text-1" value="" placeholder="Email")
+                                            .row.row-xs.form-group
+                                                label.control-label.col-sm-4
+                                                    | Oud wachtwoord:
+                                                    span.require *
+                                                .col-sm-6
+                                                    input.form-control(type="password" name="field-text-1" id="field-text-2" value="" placeholder="Oud wachtwoord")
+                                            .row.row-xs.form-group
+                                                label.control-label.col-sm-4
+                                                    | Nieuw wachtwoord:
+                                                    span.require *
+                                                .col-sm-6
+                                                    input.form-control(type="password" name="field-text-1" id="field-text-3" value="" placeholder="Nieuw wachtwoord")
+                                            .row.row-xs.form-group
+                                                label.control-label.col-sm-4
+                                                    | Herhaal wachtwoord:
+                                                    span.require *
+                                                .col-sm-6
+                                                    input.form-control(type="password" name="field-text-1" id="field-text-4" value="" placeholder="Herhaal wachtwoord")
+                                            .row.row-xs.form-group
+                                                .col-sm-2.col-sm-offset-4
+                                                    button.btn.btn-primary.btn-block Opslaan
+            include elements/footer
+            include elements/scripts

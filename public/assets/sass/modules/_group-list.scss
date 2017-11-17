@@ -1,0 +1,28 @@
+.list-group {
+    &-clear {
+        .list-group-item {
+            padding-left: 0;
+            padding-right: 0;
+            border-left: 0;
+            border-right: 0;
+            line-height: 1.4em;
+            &:first-child {
+                border-top: 0;
+                padding-top: 0;
+            }
+            &:last-child {
+                border-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .table {
+        margin-bottom: 0;
+    }
+    .table-clear {
+        td,
+        th {
+            padding-left: 0;
+        }
+    }
+}

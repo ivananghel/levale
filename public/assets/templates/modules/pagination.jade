@@ -1,0 +1,8 @@
+.pagination
+    - for (var x = 0; x < pagination; x++)
+        if(x == 0)
+            li.active
+                a(href="#")= x+1
+        else
+            li
+                a(href="#")= x+1

@@ -1,0 +1,109 @@
+.btn {
+    @include animate(300ms, background, color, box-shadow, border-color);
+    padding: $button-padding;
+    line-height: $button-line;
+    font-size: $button-font-size;
+    &.btn {
+        @media #{$small-down} {
+            white-space: normal;
+        }
+        &-default {
+            background: $brand-color-dark;
+            border: 1px solid transparent;
+            color: #fff;
+            &:hover,
+            &:focus {
+                outline: none;
+                background: $brand-color-dark;
+                border: 1px solid transparent;
+                box-shadow: rgba(0, 0, 0, 0.08) 0 3px 5px;
+            }
+        }
+        &-primary {
+            @include gradient-brand-orange;
+            border: 1px solid transparent;
+            font-weight: 400;
+            color: #fff;
+            &:hover,
+            &:focus {
+                outline: none;
+                @include gradient-brand-orange;
+                border: 1px solid transparent;
+                box-shadow: rgba(233, 85, 13, 0.2) 0 3px 5px;
+            }
+        }
+        &-clear {
+            color: #909599;
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        &-danger {
+            background: red;
+            border-color: red;
+            &:hover,
+            &:focus {
+                outline: none;
+                background: red - 15;
+                border: 1px solid red - 15;
+                box-shadow: rgba(233, 85, 13, 0.2) 0 3px 5px;
+            }
+        }
+        &-circle {
+            @include gradient-brand-orange;
+            border: 1px solid transparent;
+            display: block;
+            border-radius: 48px;
+            height: 48px;
+            width: 48px;
+            text-align: center;
+            line-height: 1;
+            padding: 4px;
+            position: relative;
+            color: #fff;
+            .fa,
+            .glyphicon {
+                @include position(center, 0, center, 0);
+                width: 17px;
+                height: 17px;
+                display: block;
+                font-size: 17px;
+            }
+            &.access {
+                border-color: $brand-color-green;
+                .fa,
+                .glyphicon {
+                    color: $brand-color-green;
+                }
+            }
+        }
+        &-link {
+            font-size: 13px;
+            color: #909599;
+            &:hover,
+            &:focus {
+                color: $brand-color;
+            }
+        }
+        &-square {
+            border-radius: 0;
+        }
+        &-sm {
+            padding: 5px 9px;
+        }
+        &-clear {
+            background: none;
+            box-shadow: none;
+            border-radius: 0;
+            outline: none;
+            .fa,
+            .glyphicon {
+                color: $brand-light-blue;
+                font-size: $button-icon-size;
+                height: $button-icon-size;
+                width: $button-icon-size;
+            }
+        }
+    }
+}

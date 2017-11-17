@@ -1,0 +1,25 @@
+.panel.panel-default.clear
+    .panel-heading
+        .heading-title.small Filter results
+    .panel-body
+        .row
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-1") Search product by barcode:
+                    input.form-control(type="text" name="field-text-1" id="field-text-1" value="" placeholder="Barcode ..")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-2") Search product by SKU:
+                    input.form-control(type="text" name="field-text-2" id="field-text-2" value="" placeholder="SKU ..")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-3") Search product by title:
+                    input.form-control(type="text" name="field-text-3" id="field-text-3" value="Teens vs MILFs #4" placeholder="Title ..")
+            .col-lg-12.col-md-4.col-sm-6
+                label.control-label &nbsp;
+                .row.row-xxs
+                    .col-md-6.col-sm-4.col-xs-6.col-xxs-12.form-group.fg-sm
+                        a.btn.btn-primary.btn-block(href="#") Filter results
+                    if( !$reset )
+                        .col-md-6.col-sm-4.col-xs-6.col-xxs-12.form-group.fg-sm
+                            a.btn.btn-clear.btn-block(href="#") Clear filters

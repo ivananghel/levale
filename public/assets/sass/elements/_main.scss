@@ -1,0 +1,198 @@
+.special {
+    &-wrapper {
+        &::after {
+            clear: both;
+            content: '';
+            width: 100%;
+            display: table;
+        }
+    }
+    &-sidebar {
+        @media #{$xlarge-up} {
+            width: 240px;
+            float: left;
+        }
+    }
+    &-content {
+        @media #{$xlarge-up} {
+            width: calc(100% - 240px);
+            float: left;
+            padding-left: 30px;
+        }
+    }
+}
+.ui-draggable-handle {
+    -ms-touch-action: none;
+    touch-action: none;
+}
+.list-overflow {
+    overflow-y: scroll;
+    height: 392px;
+    margin-top: 10px;
+    table {
+        &.table {
+            margin: 0;
+            > tbody {
+                > tr {
+                    > td {
+                        &:last-child {
+                            padding-right: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.input-daterange.col-daterange {
+    input {
+        border-radius: 3px;
+        text-align: left;
+    }
+}
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.disabled,
+.datepicker table tr td.active.disabled.active,
+.datepicker table tr td.active.disabled.disabled,
+.datepicker table tr td.active.disabled:active,
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.disabled:hover.active,
+.datepicker table tr td.active.disabled:hover.disabled,
+.datepicker table tr td.active.disabled:hover:active,
+.datepicker table tr td.active.disabled:hover:hover,
+.datepicker table tr td.active.disabled:hover[disabled],
+.datepicker table tr td.active.disabled[disabled],
+.datepicker table tr td.active:active,
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active:hover.active,
+.datepicker table tr td.active:hover.disabled,
+.datepicker table tr td.active:hover:active,
+.datepicker table tr td.active:hover:hover,
+.datepicker table tr td.active:hover[disabled],
+.datepicker table tr td.active[disabled] {
+    background: $brand-color-green;
+}
+
+.below-link {
+    text-align: right;
+    padding: 0 25px 25px;
+    a {
+        @include link-basic(backword);
+        color: $brand-color;
+    }
+    @media #{$large-down} {
+        text-align: center;
+    }
+}
+.object-location-map {
+    padding-bottom: 100%;
+}
+.decor-list {
+    @include reset-list;
+    padding-top: 5px;
+    > li {
+        padding: 8px 0 8px 48px;
+        position: relative;
+        min-height: 32px;
+        line-height: 20px;
+        &:not(:last-child) {
+            margin-bottom: 9px;
+        }
+    }
+    a {
+        color: $brand-text-color;
+    }
+    .square {
+        @include position(left, 0, top, 0);
+        border: 1px solid #e9ecef;
+        border-radius: 2px;
+        height: 32px;
+        width: 32px;
+        color: #868e96;
+        span {
+            @include position(center, 0, center, 0);
+            font-size: 16px;
+            height: 16px;
+            width: 16px;
+            display: block;
+        }
+    }
+}
+.textarea-footer {
+    background: #f8f9fa;
+    border: 1px solid #dfe2e5;
+    border-top: 0;
+    padding: 16px 15px 6px;
+}
+.preview-posts {
+    border: 1px solid #dfe2e5;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 1px 3px;
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &-list {
+        padding-top: 15px;
+    }
+    &-body {
+        font-size: 14.6px;
+        line-height: 1.5em;
+        min-height: 90px;
+    }
+    &-body,
+    &-footer {
+        padding: 15px 25px 5px;
+    }
+    &-footer {
+        background: $brand-light-gray;
+        border-radius: 0 0 3px 3px;
+    }
+    &-meta {
+        @include reset-list;
+        @media #{$small-up} {
+            @include inline-list;
+        }
+        padding: 8px 0;
+        > li {
+            color: #868e96;
+            line-height: 20px;
+            position: relative;
+            @media #{$small-up} {
+                @include inline-item(12.6px);
+                &:not(:first-child) {
+                    padding-left: 30px;
+                    &::before {
+                        @include position(left, 13px, center, 0);
+                        content: '';
+                        width: 4px;
+                        height: 4px;
+                        display: block;
+                        border-radius: 4px;
+                        background: #868e96;
+                    }
+                }
+            }
+            @media #{$small-down} {
+                padding-left: 17px;
+                &::before {
+                    @include position(left, 0, center, 0);
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    display: block;
+                    border-radius: 4px;
+                    background: #868e96;
+                }
+            }
+        }
+    }
+    &-settings {
+        @media #{$small-up} {
+            text-align: right;
+        }
+    }
+}
+.panel-body-first {
+    padding-top: 10px;
+}

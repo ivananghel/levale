@@ -1,0 +1,16 @@
+{
+    "name": "Units",
+    "alias": "units",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\Units\\Providers\\UnitsServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

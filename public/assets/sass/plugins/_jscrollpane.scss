@@ -1,0 +1,15 @@
+.scroll-sidebar {
+    .jspPane {
+        width: 100%!important
+    }
+    .jspVerticalBar {
+        background: $brand-text-color;
+        width: 5px
+    }
+    .jspTrack {
+        background: #2e3033;
+    }
+    .jspDrag {
+        background: $brand-color;
+    }
+}

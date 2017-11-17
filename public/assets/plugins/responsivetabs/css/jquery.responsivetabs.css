@@ -1,0 +1,47 @@
+.responsive-taber {
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+	font-size: 0;
+	position: relative;
+	width: 100%;
+}
+.responsive-taber.loaded {
+    overflow: visible;
+    opacity: 1;
+    visibility: visible;
+}
+
+.responsive-taber__item,
+.responsive-taber__dropdown {
+	font-size: 15px;
+}
+@media screen and (max-width: 991px) {
+    .responsive-taber.loaded {
+        display: table;
+    }
+    .responsive-taber__item,
+    .responsive-taber__dropdown {
+    	display: inline-block;
+    	vertical-align: top;
+    }
+}
+.responsive-taber__item > a,
+.responsive-taber__arrow > a {
+	display: block;
+	padding: 20px;
+}
+.responsive-taber__arrow > a {
+	padding-left: 0;
+	padding-right: 0;
+	text-align: center;
+}
+.responsive-taber__dropdown {
+	position: relative;
+}
+.responsive-taber__dropdown .dropdown-menu {
+	right: 0;
+	left: auto;
+	top: 100%;
+}

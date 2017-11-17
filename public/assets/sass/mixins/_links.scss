@@ -1,0 +1,20 @@
+@mixin link-basic($type: null) {
+    @if( $type == 'backword' ) {
+        text-decoration: underline;
+    }@else if( $type == 'clear' ) {
+        text-decoration: none;
+    }@else {
+        text-decoration: none;
+    }
+
+    &:hover,
+    &:focus {
+        @if( $type == 'backword' ) {
+            text-decoration: none;
+        }@else if( $type == 'clear' ) {
+            text-decoration: none;
+        }@else {
+            text-decoration: underline;
+        }
+    }
+}

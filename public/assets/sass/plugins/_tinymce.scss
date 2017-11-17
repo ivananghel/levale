@@ -1,0 +1,32 @@
+body .mce-tinymce {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-color: #dfe2e5;
+    > .mce-container-body {
+        //width: calc(100% - 2px)!important;
+    }
+    .mce-branding-powered-by {
+        display: none;
+    }
+    .mce-statusbar {
+        background: $brand-light-gray;
+        display: none;
+    }
+    .mce-panel {
+        background: $brand-light-gray;
+    }
+    .mce-btn button {
+        background: $brand-light-gray;
+    }
+    div.mce-edit-area {
+        border-top-color: #dfe2e5;
+    }
+    .mce-ico,
+    .mce-txt {
+        color: #aaa;
+    }
+    .mce-caret {
+        border-top-color: #aaa;
+    }
+}

@@ -1,0 +1,16 @@
+.grid-sizer,
+.grid-item {
+    @media #{$small-down} {
+        width: calc(100%);
+    }
+    @media #{$medium-range} {
+        width: calc(50%);
+    }
+    @media #{$medium-up} {
+        width: calc(33.33333%);
+    }
+    padding: 0 15px;
+}
+.grid-item {
+    margin-bottom: 8px;
+}

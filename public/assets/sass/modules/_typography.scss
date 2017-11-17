@@ -1,0 +1,16 @@
+@mixin heading-title() {
+    color: $heading-color;
+    font-weight: $heading-weight;
+    font-size: $heading-size3;
+    line-height: $heading-line3;
+    font-family: $heading-font;
+    &.medium {
+        font-size: 34px;
+    }
+    &.small {
+        font-size: 24px;
+    }
+}
+.heading-title {
+    @include heading-title;
+}

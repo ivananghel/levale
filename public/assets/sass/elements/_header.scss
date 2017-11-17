@@ -1,0 +1,345 @@
+@mixin user-dropdown() {
+    .dropdown {
+        &-menu {
+            width: 100%;
+            left: auto;
+            right: 0;
+        }
+        &-toggle {
+            @include link-basic(clear);
+            display: block;
+            line-height: 20px;
+            padding: 5px 63px 5px 15px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            height: 48px;
+            color: #fff;
+            @media #{$xlarge-up} {
+                padding: 5px 63px 5px 15px;
+            }
+            .name {
+                font-size: 16px;
+                color: #242424;
+            }
+            .circle {
+                @include position(right, 0, top, 0);
+                width: 48px;
+                height: 48px;
+                border-radius: 48px;
+                overflow: hidden;
+            }
+            .position {
+                display: block;
+                color: #909599;
+                font-size: 13px;
+            }
+            .avatar {
+                @include position(left, 0, top, 0);
+                width: 48px;
+                height: 48px;
+                border-radius: 48px;
+                overflow: hidden;
+                img {
+                    @include position(center, 0, center, 0);
+                    width: 100%;
+                    border-radius: 100%;
+                    overflow: hidden;
+                }
+            }
+            .caret {
+                @include position(right, 5px, center, 0);
+                border-top-color: #fff;
+            }
+        }
+    }
+}
+.header-fixed {
+    background: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.3);
+    height: 82px;
+    @media #{$medium-down} {
+        height: 50px;
+    }
+    padding-left: 280px;
+    @media #{$xlarge-down} {
+        padding-left: 249px;
+    }
+    @media #{$medium-down} {
+        padding-left: 0;
+    }
+}
+.header {
+    height: 82px;
+    @media #{$medium-down} {
+        height: 50px;
+    }
+    .logo {
+        position: relative;
+        height: 82px;
+        width: 280px;
+        a {
+            @include position(left, 0, top, 0);
+            display: block;
+            width: 100%;
+            height: 100%;
+            img {
+                @include position(center, 0, center, 0);
+                width: 70%;
+            }
+        }
+        @media #{$medium-up} {
+            @include position(left, 0, top, 0);
+            border-right: 1px solid #e3e3e7;
+        }
+        @media #{$xlarge-down} {
+            width: 249px;
+        }
+        @media #{$medium-down} {
+            float: left;
+            height: 50px;
+            a {
+                img {
+                    right: auto;
+                    left: 15px;
+                }
+            }
+        }
+    }
+    .ht_nav {
+        float: left;
+        &.ht_sub-nav {
+            .ht_nav-list {
+                > li {
+                    &:not(:first-child) {
+                        margin-left: 0;
+                    }
+                    &.active {
+                        a {
+                            background: #35383e;
+                        }
+                    }
+                }
+                a {
+                    padding: 10px 15px;
+                    @media #{$xlarge-down} {
+                        padding: 10px;
+                        font-size: 11px;
+                    }
+                }
+            }
+        }
+        &-list {
+            @include reset-list;
+            @include inline-list;
+            > li {
+                @include inline-item(13.3px);
+                &:not(:first-child) {
+                    margin-left: 0;
+                    @media #{$xlarge-up} {
+                        margin-left: 20px;
+                    }
+                }
+                &.active {
+                    a {
+                        @include gradient-brand-orange-hover();
+                        color: #fff;
+                        &:hover,
+                        &:focus {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            a {
+                @include animate(300ms, color);
+                display: block;
+                padding: 15px;
+                line-height: 20px;
+                color: #fff;
+                &:hover,
+                &:focus {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    .c-hamburger {
+        margin: 16px 15px 7px 20px;
+        float: right;
+        background: none;
+    }
+    &-list {
+        @include inline-list;
+        padding: 17px 0 0 0;
+        @media #{$medium-down} {
+            text-align: center;
+            display: block;
+        }
+    }
+    &-item {
+        @include inline-item(12.6px);
+        &:not(:first-child) {
+            margin-left: 7px;
+            @media #{$xlarge-up} {
+                margin-left: 15px;
+            }
+        }
+        .dropdown-toggle {
+            border-radius: 3px;
+        }
+        .btn-default {
+            height: 48px;
+            width: 48px;
+            position: relative;
+            .glyphicon {
+                @include position(center, 0, center, 0);
+                width: 20px;
+                height: 20px;
+                font-size: 20px;
+                display: block;
+                line-height: 1px;
+                text-align: center;
+                &::before {
+                    line-height: 1;
+                    position: relative;
+                    top: -1px;
+                }
+            }
+        }
+    }
+    &-search {
+        margin-top: 4px;
+        max-width: 353px;
+        .form-control {
+            @media #{$medium-up} {
+                @include position(right, 0, top, 0);
+            }
+            @include animate(500ms, width);
+            z-index: 1;
+            width: 100%;
+            height: 40px;
+            line-height: 20px;
+            padding: 9px 39px 9px 15px;
+        }
+        height: 40px;
+        position: relative;
+        @media #{$medium-down} {
+            width: auto;
+            margin-bottom: 10px;
+        }
+        .btn {
+            @include position(right, 1px, top, 1px);
+            @include animate(300ms, color);
+            outline: none!important;
+            z-index: 2;
+            background: #fff;
+            width: 36px;
+            height: 36px;
+            font-size: 17px;
+            color: #909599;
+            &:hover,
+            &:focus {
+                color: $brand-color;
+            }
+        }
+        &.open {
+            .form-control {
+                width: 200px;
+                right: 24px;
+                border-color: $brand-color;
+                box-shadow: rgba(233,85,13,0.2) 0 3px 5px;
+            }
+            .btn {
+                background: #fff;
+                border-color: $brand-color-green;
+                .glyphicon,
+                .fa {
+                    color: $brand-color-green;
+                }
+            }
+        }
+    }
+    &-middle {
+        @include gradient-brand-orange();
+        -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.15);
+    }
+    &-bottom {
+        background: $brand-color-dark;
+    }
+    @include user-dropdown;
+    .dropdown {
+        @media #{$medium-down} {
+            display: none;
+        }
+    }
+}
+.hb_title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5em;
+    padding: 5px 0;
+}
+
+.mm-menu {
+    @include user-dropdown;
+    .mm-panels>.mm-panel.mm-hasnavbar {
+        padding-top: 90px;
+    }
+    .mm-navbar {
+        top: 50px;
+    }
+    .dropdown {
+        &.add {
+            @include position(left, 15px, top, 10px);
+            width: 48px;
+            .btn.btn-default {
+                background: #fff;
+                border-color: #fff;
+                color: $brand-color-dark;
+            }
+            .dropdown-menu {
+                right: auto;
+                left: 0;
+                width: 100%;
+            }
+        }
+        &.user {
+            @include position(left, 73px, top, 10px);
+            width: calc(100% - 103px);
+        }
+        z-index: 999;
+        height: 48px;
+        display: block!important;
+        visibility: visible!important;
+        opacity: 1!important;
+        &-toggle {
+            height: 48px;
+            padding-left: 15px;
+            text-align: left;
+            .name {
+                display: block;
+                color: #fff;
+            }
+            .position {
+                display: block;
+            }
+            .caret {
+                border-top-color: #fff;
+            }
+        }
+        &.test {
+            border: 1px solid red;
+        }
+    }
+}

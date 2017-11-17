@@ -1,0 +1,218 @@
+input {
+    &.form-control {
+        line-height: $form-line;
+        font-size: $form-font-size;
+        height: $form-height;
+        border: 1px solid $form-border-color;
+        background: $form-background-color;
+        border-radius: 3px;
+        box-shadow: none;
+        outline: none;
+        padding: 9px 13px;
+        @media #{$small-down} {
+            font-size: 16px;
+        }
+        &:focus {
+            border-color: $brand-color;
+            box-shadow: rgba(233, 85, 13, 0.2) 0 3px 5px;
+        }
+        &.gray-color {
+            color: #b5b9bf;
+        }
+    }
+    &.form-square {
+        border-radius: 0;
+    }
+}
+textarea {
+    @media #{$small-down} {
+        font-size: 16px!important;
+    }
+}
+select {
+    &.form-control {
+        height: 40px;
+    }
+}
+.require {
+    color: red;
+    padding-left: 3px;
+}
+
+.control-label {
+    font-weight: 400;
+}
+.form-group {
+    &.fg-sm {
+        margin-bottom: 10px;
+    }
+    &.fg-lg {
+        margin-bottom: 30px;
+    }
+    &-media {
+        &-sm {
+            @media #{$small-down} {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}
+
+.form-horizontal {
+    .control-label {
+        @media #{$medium-up} {
+            line-height: 20px;
+            padding: 10px 10px 10px 0;
+        }
+    }
+    .form-group {
+        &.fg-sm {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+.radio,
+.checkbox {
+    input {
+        opacity: 0;
+        visibility: hidden;
+        &:checked {
+            ~ label {
+                &::after {
+                    @include position(left, 0, top, 0);
+                    line-height: 16px;
+                    text-align: center;
+                    display: block;
+                    font-family: 'Glyphicons Halflings';
+                    content: "\e013";
+                    width: 16px;
+                    height: 16px;
+                    font-size: 8px;
+                    color: #fff;
+                }
+                &::before {
+                    border-color: transparent;
+                    @include gradient-brand-orange;
+                }
+            }
+        }
+    }
+    label {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        padding-left: 27px;
+        padding-top: 2px;
+        line-height: 16px;
+        min-height: 20px;
+        &::before {
+            @include position(left, 0, top, 0);
+            @include gradient-brand-gray;
+            content: '';
+            width: 16px;
+            height: 16px;
+            display: block;
+            border: 1px solid #ced0da;
+            border-radius: 2px;
+        }
+    }
+}
+
+.radio {
+    input {
+        &:checked {
+            ~ label {
+
+                &::after {
+                    left: 5px;
+                    top: 5px;
+                    font-size: 0;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 6px;
+                    background: #fff;
+                }
+            }
+        }
+    }
+    label {
+        &::before {
+            border-radius: 16px;
+        }
+    }
+}
+.check-horizontal {
+    .checked,
+    .radio {
+        @include inline-item(13.6px);
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+.input-group {
+    &.input-group-inner {
+        position: relative;
+        display: block;
+        input {
+            &.form-control {
+                border-radius: 3px;
+                padding-right: 46px;
+                width: 100%;
+                float: none;
+            }
+        }
+        .input-group-btn {
+            @include position(right, 0, top, 0);
+            width: 36px;
+            height: 100%;
+            .btn {
+                background: none;
+                border: 0;
+            }
+        }
+    }
+    .input-group-btn {
+        .btn {
+            height: 36px;
+            min-width: 36px;
+            position: relative;
+            text-align: center;
+            .glyphicon,
+            .fa {
+                @include position(center, 0, center, 0);
+                font-size: 16px;
+                height: 16px;
+                width: 16px;
+                display: block;
+            }
+        }
+    }
+}
+.input-group-multiply {
+    &::after {
+        clear: both;
+        width: 100%;
+        display: table;
+        content: '';
+    }
+    .input-group-addon {
+        float: left;
+        display: block;
+        width: 30px;
+        padding: 0;
+        line-height: 40px;
+        text-align: center;
+        border: 0;
+        background: none;
+    }
+   input {
+       &.form-control {
+           width: calc(50% - 15px);
+           float: left;
+       }
+   }
+}

@@ -1,0 +1,46 @@
+.panel.panel-default.clear
+    .panel-heading
+        .heading-title.small Filter results
+    .panel-body
+        .row
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-1") SKU
+                    input.form-control(type="text" name="field-text-1" id="field-text-1" value="" placeholder="Barcode ..")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-2") Barcode
+                    input.form-control(type="text" name="field-text-2" id="field-text-2" value="" placeholder="SKU ..")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-3") Title
+                    input.form-control(type="text" name="field-text-3" id="field-text-3" value="Teens vs MILFs #4" placeholder="Title ..")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-4") Status
+                    select.form-control(name="field-text-4" id="field-text-4" data-placeholder="Choose...")
+                        option
+                        option(value="1") One
+                        option(value="2") Two
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-5") In Stock
+                    .input-group-multiply
+                        input.form-control(type="text" name="field-text-5" id="field-text-5" value="" placeholder="Min")
+                        .input-group-addon -
+                        input.form-control(type="text" name="field-text-6" id="field-text-6" value="" placeholder="Max")
+            .col-lg-12.col-md-4.col-sm-6
+                .form-group
+                    label.control-label(for="field-text-7") In Stock
+                    .input-group-multiply
+                        input.form-control(type="text" name="field-text-7" id="field-text-7" value="" placeholder="Min")
+                        .input-group-addon -
+                        input.form-control(type="text" name="field-text-8" id="field-text-8" value="" placeholder="Max")
+            .col-lg-12.col-md-4.col-sm-6
+                label.control-label &nbsp;
+                .row.row-xxs
+                    .col-md-6.col-sm-4.col-xs-6.col-xxs-12.form-group.fg-sm
+                        a.btn.btn-primary.btn-block(href="#") Filter results
+                    if( !$reset )
+                        .col-md-6.col-sm-4.col-xs-6.col-xxs-12.form-group.fg-sm
+                            a.btn.btn-clear.btn-block(href="#") Clear filters

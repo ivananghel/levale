@@ -1,0 +1,33 @@
+doctype html
+html(lang="en")
+    head
+        title Page Products add barcode
+        include elements/head
+    body
+        .site-wrapper
+            include elements/header
+            include elements/sidebar
+            .content-container
+                .container-fluid.container-md-30
+                    .form-group.fg-lg
+                        .panel.panel-default
+                            .panel-heading
+                                .heading-title Add Barcode
+                            .panel-body
+                                .special-wrapper
+                                    .special-sidebar
+                                        include elements/filter-simple
+                                    .special-content
+                                        .form-group.fg-lg
+                                            include elements/table-radio
+                                        .row
+                                            .col-lg-8.col-md-10
+                                                .row.row-xxs
+                                                    .col-md-8.col-sm-7.col-xs-6.col-xxs-12
+                                                        .form-group
+                                                            input.form-control(type="text" name="field-text-4" id="field-text-4" value="" placeholder="Add new barcode of this product ..")
+                                                    .col-md-4.col-sm-5.col-xs-6.col-xxs-12
+                                                        .form-group
+                                                            a.btn.btn-primary.btn-block Add barcode
+            include elements/footer
+            include elements/scripts

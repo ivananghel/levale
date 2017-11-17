@@ -1,0 +1,32 @@
+.modal {
+    &-title {
+        @include heading-title;
+    }
+    &-backdrop {
+        background: none;
+        opacity: 0;
+        visibility: hidden;
+    }
+    &-header {
+        background: #f1f3f5;
+        border-color: #f8f9fa;
+        border-radius: 5px 5px 0 0;
+        padding-bottom: 5px;
+    }
+    &-footer {
+        background: #f1f3f5;
+        border-color: #f8f9fa;
+        border-radius: 0 0 5px 5px;
+    }
+    &-content {
+        border: 0;
+    }
+}
+.site-wrapper {
+    .modal-backdrop {
+        @include animate(500ms, opacity);
+        opacity: 0.3;
+        visibility: visible;
+        background: #000;
+    }
+}

@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+    head
+        title Page Products stock checkout
+        include elements/head
+    body
+        .site-wrapper
+            include elements/header
+            include elements/sidebar
+            .content-container
+                .container-fluid.container-md-30
+                    .form-group.fg-lg
+                        .panel.panel-default
+                            .panel-heading
+                                .heading-title Stock Check-out
+                            .panel-body
+                                .special-wrapper
+                                    .special-sidebar
+                                        include elements/filter-simple
+                                    .special-content
+                                        .form-group.fg-lg
+                                            include elements/table-radio
+                                        .row
+                                            .col-lg-6.col-md-10
+                                                .form-group
+                                                    label.control-label(for="field-text-4") Set new stock amount:
+                                                    .row.row-xxs
+                                                        .col-md-9
+                                                            .form-group
+                                                                input.form-control(type="text" name="field-text-4" id="field-text-4" value="" placeholder="Add the new stock amount ..")
+                                                        .col-md-3
+                                                            .form-group
+                                                                a.btn.btn-primary.btn-block Decrease stock
+                                            .col-lg-4.col-md-3
+                                                .form-group
+                                                    label.control-label.btn-block
+                                                        | &nbsp;
+                                                    a.btn.btn-primary Decrease stock by 1
+            include elements/footer
+            include elements/scripts

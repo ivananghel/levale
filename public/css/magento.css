@@ -1,0 +1,33 @@
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #16141C;
+    top:0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+
+.overlay:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.overlay img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.labelSpan
+{
+    color: white;
+    display: inline-block;
+    float: none;
+    position: absolute;
+    padding-top: 60px;
+    font-size: 20px;
+}

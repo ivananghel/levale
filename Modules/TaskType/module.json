@@ -1,0 +1,16 @@
+{
+    "name": "TaskType",
+    "alias": "tasktype",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\TaskType\\Providers\\TaskTypeServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}

@@ -1,0 +1,74 @@
+*:focus::-moz-placeholder {
+    color: transparent !important;
+}
+
+*[autofocus]::-moz-placeholder:focus {
+    color: graytext !important;
+}
+
+*:focus:-moz-placeholder {
+    color: transparent !important;
+}
+
+*[autofocus]:-moz-placeholder:focus {
+    color: graytext !important;
+}
+
+*:focus::-webkit-input-placeholder {
+    color: transparent !important;
+}
+
+*[autofocus]::-webkit-input-placeholder {
+    color: graytext !important;
+}
+@mixin placeholder( $conf:() ) {
+
+    //config with params
+    $conf: map-merge((
+            color: $placeholder-color,
+            font: $placeholder-font,
+            weight: $placeholder-weight,
+            style: $placeholder-style,
+            line: $placeholder-line
+    ), $conf);
+
+    $color: map-get($conf, color);
+    $font: map-get($conf, font);
+    $weight: map-get($conf, weight);
+    $style: map-get($conf, style);
+    $line: map-get($conf, line);
+
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-size: $font;
+        opacity: 1;
+        font-weight: $weight;
+        font-style: $style;
+        line-height: $line;
+    }
+    &:-moz-placeholder {
+        color: $color;
+        font-size: $font;
+        opacity: 1;
+        font-weight: $weight;
+        font-style: $style;
+        line-height: $line;
+    }
+    &::-moz-placeholder {
+        color: $color;
+        font-size: $font;
+        opacity: 1;
+        font-weight: $weight;
+        font-style: $style;
+        line-height: $line;
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        font-size: $font;
+        opacity: 1;
+        font-weight: $weight;
+        font-style: $style;
+        line-height: $line;
+    }
+    
+}

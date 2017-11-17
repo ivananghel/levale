@@ -1,0 +1,34 @@
+.noUi-horizontal {
+    height: 4px;
+    border-radius: 2px;
+    background: $brand-light-blue;
+    border: 0;
+    box-shadow: none;
+    .noUi {
+        &-handle {
+            @include gradient-brand-gray;
+            height: 16px;
+            width: 16px;
+            border-radius: 3px;
+            border: 1px solid #ced0da;
+            left: -8px;
+            top: -6px;
+            cursor: pointer;
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        &-tooltip {
+            background: #353c48;
+            color: #fff;
+            font-size: 13.6px;
+            border-radius: 3px;
+            border: 0;
+            bottom: 150%;
+        }
+    }
+}
+.noUi-connect {
+    background: #1d95ee;
+}

@@ -1,0 +1,40 @@
+-
+    var pageList = [
+        {
+            title: "index.html"
+        },{
+            title: "login.html"
+        },{
+            title: "login-errors.html"
+        },{
+            title: "login-forgot.html"
+        },{
+            title: "login-reset.html"
+        },{
+            title: "products.html"
+        },{
+            title: "products-add-barcode.html"
+        },{
+            title: "products-stock-checkin.html"
+        },{
+            title: "products-stock-checkin-search.html"
+        },{
+            title: "products-stock-checkout.html"
+        },{
+            title: "products-stock-manual.html"
+        },{
+            title: "user-settings.html"
+        }
+    ];
+mixin page-list(page, index)
+    a.list-group-item(href=page.title)
+        span.badge= index+1
+        = page.title
+mixin page-list-template()
+    for page, index in pageList
+        +page-list(page, index)
+.container
+    .row
+        .col-md-6.col-md-offset-3
+            .list-group.badge-left
+                +page-list-template()
