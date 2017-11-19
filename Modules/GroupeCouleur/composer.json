@@ -1,0 +1,25 @@
+{
+    "name": "nwidart/groupecouleur",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\GroupeCouleur\\Providers\\GroupeCouleurServiceProvider"
+            ],
+            "aliases": {
+                
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\GroupeCouleur\\": ""
+        }
+    }
+}
