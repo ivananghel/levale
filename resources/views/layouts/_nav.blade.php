@@ -18,7 +18,9 @@
                                 <li class="{{Request::segment(2) == 'units' ? 'active' : ''}}">
                                     <a href="{{route('units.index')}}"><span class="glyphicon glyphicon-chevron-right"></span>{{trans('menu.measured_units_menu')}}</a>
                                 </li>
-
+                                <li class="{{Request::segment(2) == 'groupecouleur' ? 'active' : ''}}">
+                                    <a href="{{route('groupecouleur.index')}}"><span class="glyphicon glyphicon-chevron-right"></span>{{trans('menu.groupe_couleur')}}</a>
+                                </li>
                             </ul>
                         </div>
                     </li>

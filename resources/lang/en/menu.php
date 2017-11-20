@@ -11,4 +11,5 @@ return [
     'measured_units_menu' => 'Measurement units',
     'tasks_type_menu' => 'Task types',
     'tags' => 'Tags',
+    'groupe_couleur'  =>'Groupe Couleur',
 ];
