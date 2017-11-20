@@ -14,7 +14,10 @@ return [
     'status' => 'Status',
     'name'  =>'Name',
     'save' => 'Save',
-    'was_added' => 'Tag was added',
-    'was_updated' => 'Tag was updated',
-    'was_deleted' => 'Tag was deleted',
+    'was_added' => 'Group Color Create',
+    'was_updated' => 'Group Color Update',
+    'was_deleted' => 'Group Color deleted',
+    'confirmation_yes'=>'Yes',
+    'confirmation_no'=>'No',
+    'are_you_sure'  => 'Are you sure',
 ];

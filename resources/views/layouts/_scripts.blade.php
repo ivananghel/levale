@@ -24,20 +24,40 @@
 
 <script>
 
-    $(document).ready(function () {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': "{{ csrf_token() }}"
-            },
-            beforeSend: function () {
-                // Handle the complete event
-                // alert('ajax before!');
-            },
-            complete: function () {
-                // Handle the complete event
-                // alert('ajax complete!');
-            }
+$(document).ready(function () {
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': "{{ csrf_token() }}"
+        },
+        beforeSend: function () {
+            // Handle the complete event
+            // alert('ajax before!');
+        },
+        complete: function () {
+            // Handle the complete event
+            // alert('ajax complete!');
+        }
+    });
+    
+    //remote modal custom
+    $(document).on("click", ".remote_modal", function (e) {
+        e.preventDefault();
+        $(this).data('#remote_modal', null);// clear modal if has some information from last used 
+        content = $('#remote_modal .modal-content');
+        url = $(this).attr("ajax_target");
+        $.get(url, function (html) {
+            content.html(html);
+            setTimeout(function(){
+                $('#remote_modal').modal({show: true});
+            },500)
         });
     });
+    
+    $('#remote_modal').on('hidden', function () {
+        $(this).data('modal', null);
+    });
+    
+    
+});
 
 </script>

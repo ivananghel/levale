@@ -57,3 +57,10 @@
         </div>
     </div>
 </header>
+<div id="remote_modal" class="modal fade" role="dialog" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+					<!-- content will be filled here from "ajax/modal-content/model-content-1.html" -->
+			</div>
+		</div>
+</div>
