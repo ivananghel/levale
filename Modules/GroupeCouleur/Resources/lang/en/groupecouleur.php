@@ -20,4 +20,12 @@ return [
     'confirmation_yes'=>'Yes',
     'confirmation_no'=>'No',
     'are_you_sure'  => 'Are you sure',
+    'id'  => '#',
+    'title'  => 'Title',
+    'action'  => 'Action',
+    'disable'  => 'Disable',
+    'active'  => 'Active',
+    'filter_status'=>'Filter Status',
+    'filter_id'=>'Filter ID',
+    'filter_title'=>'Filter Title',
 ];

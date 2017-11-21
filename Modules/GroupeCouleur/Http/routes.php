@@ -8,4 +8,5 @@ Route::group(['middleware' => 'web', 'prefix' => 'parameters/groupecouleur', 'na
     Route::delete('/destroy/{id}', 'GroupeCouleurController@destroy')->name('groupecouleur.destroy')->middleware('auth');
     Route::get('/edit/{id}', 'GroupeCouleurController@edit')->name('groupecouleur.edit')->middleware('auth');
     Route::get('/create', 'GroupeCouleurController@create')->name('groupecouleur.create')->middleware('auth');
+    Route::post('/table', 'GroupeCouleurController@table')->name('groupecouleur.table')->middleware('auth');
 });

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Routing\Controller;
 use Modules\GroupeCouleur\Entities\GroupeCouleur;
+use DataTables;
 
 class GroupeCouleurController extends Controller
 {
@@ -57,6 +58,24 @@ class GroupeCouleurController extends Controller
 
         return back()->with('success', trans('groupecouleur::groupecouleur.was_updated'));
     }
+
+    
+    public function table(){
+        
+    $query =  GroupeCouleur::select('group_color.*');
+
+    return Datatables::of($query)
+        ->addColumn('action', function(GroupeCouleur $color){
+            return view('groupecouleur::action', [
+                'id'        => $color->id,
+                'resource'  => 'groupecouleur',
+            ]);
+        })
+        ->addColumn('status', function(GroupeCouleur $color){
+            return ($color->status == 1 ? trans('groupecouleur::groupecouleur.active') : trans('groupecouleur::groupecouleur.disable'));
+        })
+        ->make(true);
+}
             
     public function destroy($id)
     {
@@ -64,6 +83,7 @@ class GroupeCouleurController extends Controller
             $group_color->delete();
             return back()->with('success', trans('groupecouleur::groupecouleur.was_deleted'));
     }
+
         
  }
         

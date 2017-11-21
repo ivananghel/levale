@@ -12,7 +12,7 @@
         </div>
         <div class="form-group col-lg-4" >
             <label for="extension">{{trans('groupecouleur::groupecouleur.status')}}</label>
-            {{Form::select('status',['0' => trans('units::units.disable'), '1' => trans('units::units.active')], '1',['class' => 'form-control'])}}
+            {{Form::select('status',['0' => trans('groupecouleur::groupecouleur.disable'), '1' => trans('groupecouleur::groupecouleur.active')], '1',['class' => 'form-control'])}}
         </div>
     </div>
     <hr> </hr>
